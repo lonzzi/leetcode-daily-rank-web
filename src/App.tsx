@@ -1,11 +1,17 @@
-import Header from './components/Header'
-import Home from './pages/Home'
+import React from 'react'
+import { Suspense } from 'react'
+import Loading from './components/loading'
+
+const Header = React.lazy(() => import('./components/Header'))
+const Home = React.lazy(() => import('./pages/Home'))
 
 function App() {
 	return (
 		<div className="flex flex-col justify-center">
-			<Header />
-			<Home />
+			<Suspense fallback={<Loading />}>
+				<Header />
+				<Home />
+			</Suspense>
 		</div>
 	)
 }
