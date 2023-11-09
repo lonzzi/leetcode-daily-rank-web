@@ -18,7 +18,7 @@ function TableRank({ user, rank }: { user?: UserModel; rank?: number }) {
 			</td>
 			<td>
 				<a href={`https://leetcode.cn/u/${user?.UserSlug}`} target="_blank">
-					{user?.UserSlug}{' '}
+					{user?.RealName}{' '}
 				</a>
 			</td>
 			<td>
